@@ -1,0 +1,7 @@
+{{ $paginator := .Paginate (where .Data.Pages "Type" "reviews") }}
+  {{ range $paginator.Pages }}
+    <a href="{{ .URL }}"><h2>{{ .Title }}</h2></a>
+    {{ .Content }}
+    <time>{{ .Date.Format "January 2006" }}</time>
+  {{ end }}
+{{ partial "pagination.html" . }}

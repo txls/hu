@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h1>List template (user)</h1>
+{{ $paginator := .Paginate (where .Site.Pages "Params.foo" true) }}
+  {{ range $paginator.Pages }}
+    <a href="{{ .URL }}"><h2>{{ .Title }}</h2></a>
+    {{ .Content }}
+    <time>{{ .Date.Format "January 2006" }}</time>
+
+    {{ if .Params.foo }}
+    YEEEEEEEEE user
+    {{ end }}
+
+
+  {{ end }}
+{{ partial "pagination.html" . }}
+{{ end }}

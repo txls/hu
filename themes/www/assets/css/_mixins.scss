@@ -1,0 +1,28 @@
+$background-c: #f1f1f1;
+
+
+@mixin has__custom--heading ($custom){
+  @if $custom == true{
+    color: red;
+    text-transform: uppercase;
+  }
+}
+
+@mixin has__custom--paragraph ($custom){
+  @if $custom == true{
+    background-color: $background-c;
+    padding: 0.2em;
+    border: 1px solid red;
+  }
+}
+
+@mixin has__custom--bold ($custom){
+  @if $custom == true{
+    color: green;
+    font-style: italic;
+  }
+}
+
+.active{
+  background-color: red
+}

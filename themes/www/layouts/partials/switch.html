@@ -1,0 +1,7 @@
+{{ if .meta_title }}
+  meta name="twitter:" content="Twitter title"
+{{ else if .meta_description }}
+  meta name="twitter:" content="Twitter description"
+{{ else if .meta_type }}
+  meta name="twitter:" content="Twitter type"
+{{ end }}

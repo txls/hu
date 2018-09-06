@@ -1,0 +1,28 @@
+@import "grid";
+@import "mixins";
+
+
+body{
+  font: 1em helvetica;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  @include has__custom--heading(true);
+}
+
+p{
+  @include has__custom--paragraph(true);
+}
+
+b{
+  @include has__custom--bold(true);
+  text-decoration: underline;
+}
+
+
+.text{
+  font-size: 1.5em;
+  color: aqua;
+}

@@ -1,0 +1,9 @@
+{{ with $.Page.Resources.GetMatch (.Get "name") }}
+  <div style="border:3px solid red; float:left; margin: 0 0.5em;">
+    <a href="{{ .RelPermalink }}">
+      <img
+      src="{{ .RelPermalink }}">
+    </a>
+  </div>
+{{ else }}
+{{ end }}

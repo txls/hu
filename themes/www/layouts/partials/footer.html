@@ -1,0 +1,17 @@
+<footer>
+  <h1>Footer</h1>
+  <p>&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+  <ul>
+    {{if .Site.Params.siteTwitter }}<li>{{ $.Site.Params.siteTwitter }}</li>{{ else }}{{ end }}
+    {{if .Site.Params.siteFacebook }}<li>{{ $.Site.Params.siteFacebook }}</li>{{ else }}{{ end }}
+    {{if .Site.Params.siteInstagram }}<li>{{ $.Site.Params.siteInstagram }}</li>{{ else }}{{ end }}
+  </ul>
+  {{ template "_internal/google_analytics.html" . }}
+
+  <div class="left">
+    xxxx
+  </div>
+  <div class="right">
+    xxxxx
+  </div>
+</footer>

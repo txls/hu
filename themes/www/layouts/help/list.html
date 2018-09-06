@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <h1>List template (help)</h1>
+  {{ $paginator := .Paginate (where .Data.Pages "Type" "help") }}
+    {{ range $paginator.Pages }}
+      <a href="{{ .URL }}"><h2>{{ .Title }}</h2></a>
+      {{ .Content }}
+      <time>{{ .Date.Format "January 2006" }}</time>
+    {{ end }}
+  {{ partial "pagination.html" . }}
+{{ end }}

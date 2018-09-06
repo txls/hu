@@ -1,0 +1,26 @@
+<header>
+  <h1>Header</h1>
+</header>
+
+<hr>
+
+
+
+<ul>
+  <li><a href="/" {{ if .IsHome }}class="active"{{ else }}{{ end }}>Home</a></li>
+  <li><a href="/blog" {{ if or (eq .Section "blog") (eq .Data.Singular "destination") (eq .Data.Singular "party") (eq .Data.Singular "tag") }}class="active"{{ else }}{{ end }}>Blog</a></li>
+    <li><a href="/reviews" {{ if or (eq .Section "reviews") (eq .Data.Singular "brand") }}class="active"{{ else }}{{ end }}>Reviews</a></li>
+  <li><a href="/about" {{ if eq .Section "about" }}class="active"{{ else }}{{ end }}>About</a></li>
+  <li><a href="/contact" {{ if eq .Section "contact" }}class="active"{{ else }}{{ end }}>Contact</a></li>
+</ul>
+
+
+
+
+<b>Number of blog articles: {{ len (where .Site.RegularPages "Section" "blog") }}.</b>
+
+<hr>
+
+<!--div style="background-color:#d1d1d1; color:white; padding: 0.5em;"></div-->
+
+<hr>

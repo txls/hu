@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h1>Index template</h1>
+
+  <!--{{ with .Site.GetPage "/blog/blog-post2" }}{{ .Content }}{{ end }}-->
+
+
+  {{ range first 2 (where .Data.Pages "Type" "blog") }}
+    {{ .Content }}
+  {{ end }}
+
+  {{ range first 1 (where .Data.Pages "Type" "reviews") }}
+    {{ .Content }}
+  {{ end }}
+
+{{ end }}

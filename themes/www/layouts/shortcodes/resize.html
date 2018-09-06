@@ -1,0 +1,10 @@
+{{ with $.Page.Resources.GetMatch (.Get "name") }}
+  <div style="border:3px solid purple; float:left; margin: 0 0.5em;">
+    <a href="{{ (.Resize "1000x").RelPermalink }}">
+      <img
+      src="{{ (.Resize "150x").RelPermalink }}">
+    </a>
+  </div>
+{{ else }}
+  !NO IMAGE FOUND!
+{{ end }}
