@@ -1,0 +1,35 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My Site"
+theme = "www"
+sectionPagesMenu = "main"
+paginate= "1"
+disableKinds = ["taxonomyTerm"]
+preserveTaxonomyNames = true
+PaginatePath = "page"
+
+
+[params]
+  siteTwitter = "siteTwitter"
+  siteFacebook = "siteFacebook"
+  siteInstagram = "siteInstagram"
+
+[taxonomies]
+  tag = "tags"
+  destination = "destination"
+  party = "party"
+  brand = "brand"
+
+[permalinks]
+  mood = "/user/:slug/"
+  destination = "/blog/:slug/"
+  party = "/blog/:slug/"
+  tags = "/blog/:slug/"
+  brand = "/reviews/:slug/"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML", "RSS"]
+
+[imaging]
+  quality = 80
